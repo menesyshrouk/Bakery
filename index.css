@@ -1,4 +1,4 @@
-/* Reset & Fonts */
+/* ========== Reset & Fonts ========== */
 * {
   margin: 0;
   padding: 0;
@@ -9,43 +9,37 @@
 body {
   background-color: #fdf9f6;
   color: #333;
+  line-height: 1.6;
 }
 
+/* ========== Sidebar ========== */
 .main-btn {
   display: none;
   position: fixed;
-  top: 12px;
+  top: 20px;
   left: 20px;
-  background-color: transparent;
+  background: none;
   border: none;
-  font-size: 18px;
+  font-size: 30px;
+  color: #fff;
   z-index: 1000;
   cursor: pointer;
-  color: white;
 }
-.main-btn i{
-    font-size: 45px;
-    margin-left: 20px;
-}
+
 .bars {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 200px;
+  width: 250px;
   height: 100vh;
-  background-color:whitesmoke;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  padding: 40px;
   gap: 15px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease-in-out;
   z-index: 9999;
-}
-
-.bars a:hover{
-    color: #847010;
-
 }
 
 .bars.active {
@@ -54,323 +48,294 @@ body {
 
 .bars a {
   text-decoration: none;
-  color:black;
+  color: #000;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   padding: 10px;
+  transition: color 0.3s;
 }
+
+.bars a:hover {
+  color: #847010;
+}
+
 .close-btn {
   align-self: flex-end;
   background: none;
   border: none;
-  color: rgb(27, 21, 21);
   font-size: 28px;
+  color: #333;
   cursor: pointer;
-  margin-bottom: 10px;
-  transition: color 0.3s;
 }
 
 .close-btn:hover {
   color: #847010;
 }
 
-
-.header {
-  background-image: url(image/drew-coffman-1872.jpg);
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* ========== Navbar ========== */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.392);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
 }
 
 .logo-nav img {
-  width: 200px;
+  width: 180px;
 }
 
-.list-nav {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.list-nav ul li {
-  padding: 10px;
+.list-nav ul {
+  display: flex;
+  gap: 20px;
   list-style: none;
-}
-
-.list-nav ul li a:hover {
-  color: #847010;
-  cursor: pointer;
 }
 
 .list-nav a {
-  color: white;
-  list-style: none;
   text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
-/* Header text */
+.list-nav a:hover {
+  color: #847010;
+}
+
+/* ========== Header ========== */
+.header {
+  background-image: url("image/drew-coffman-1872.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
 .header-text {
   color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 25px;
+  max-width: 700px;
+}
+
+.header-text span {
+  font-size: 20px;
 }
 
 .header-text h1 {
-  margin: 20px;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.header-text p {
+  font-size: 18px;
 }
 
 .btn {
-  margin-top: 20px;
-  font-size: 17px;
-  padding: 15px;
+  margin-top: 10px;
+}
+
+.btn1,
+.btn2 {
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn1 {
-  padding: 20px;
-  border-radius: 5px;
-  color: #fff;
-  border: none;
-  margin: 10px;
   background-color: #8e7754;
+  color: white;
 }
 
 .btn1:hover {
   background-color: #fff;
-  color: black;
+  color: #000;
 }
 
 .btn2 {
-  padding: 20px;
-  border-radius: 5px;
-  color: #fff;
   background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
 .btn2:hover {
   background-color: #fff;
-  color: black;
+  color: #000;
 }
 
-/* Session 1 - Baker */
-.baker {
-  margin-top: 50px;
+/* ========== Sections ========== */
+.baker,
+.our-location {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 30px;
 }
 
-.baker .logo-baker img {
-  width: 500px;
-  padding: 20px;
+.logo-baker img,
+.logo-our img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
-.text-baker {
-  margin-top: 30px;
-  transform: translateY(10%);
+.text-baker,
+.text-our {
+  max-width: 600px;
 }
 
-.text-baker h3 {
-  margin: 20px;
-  font-size: 25px;
+.text-baker h3,
+.text-our h4 {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
-.text-baker p {
-  margin: 20px;
-  line-height: 2em;
+.text-baker p,
+.text-our p {
   color: #8e7754;
+  margin-bottom: 10px;
+  line-height: 1.8;
 }
 
-.list-icon {
-  margin-top: 30px;
-  padding: 20px;
-  color: #8e7754;
-  margin-bottom: 30px;
-}
-
-.list-icon ul li {
-  line-height: 3.8em;
+.list-icon ul {
   list-style: none;
 }
 
-.list-icon ul li span {
-  padding-left: 5px;
+.list-icon li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #847010;
 }
 
-/* Session 2 - Our Location */
-.our-location {
-  padding: 40px 0px;
-  background-color: #68686836;
+.list-icon span {
+  margin-right: 10px;
+  color: #333;
+  padding: 10px;
 }
 
-.text-our h4 {
-  font-size: 22px;
-  padding: 20px;
-}
-
-.text-our p {
-  padding: 20px;
-  color: #686868;
-}
-
-.our-location .logo-our img {
-  width: 500px;
-  padding: 20px;
-}
-
-/* Session 3 - Baking */
-.baking {
-  margin-top: 20px;
-}
-
-.textsession {
+/* ========== Our Baking Section ========== */
+.baking-section {
   text-align: center;
-  margin-top: 20px;
+  padding: 60px 20px;
 }
 
 .textsession h4 {
-  font-size: 20px;
-  padding: 20px;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.textsession p {
+  color: #686868;
+  margin-bottom: 30px;
 }
 
 .session3 {
-  text-align: center;
-  padding: 10px;
-  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.list-menu p,
-.list-menu h4 {
-  padding: 10px;
-  line-height: 1.8em;
-  color: #686868;
+.list-menu {
+  max-width: 300px;
+  text-align: left;
 }
 
 .list-menu img {
   width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-/* Footer */
+.list-menu h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.list-menu p {
+  color: #686868;
+}
+
+/* ========== Footer ========== */
 .footer {
   background-color: #353330;
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 50px 20px;
   text-align: center;
+  color: white;
 }
 
-.img span {
-  color: #fff;
-  padding: 30px;
+.footer img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer .social-icons {
+  margin-top: 20px;
 }
 
 .footer button {
   background-color: #686868a5;
+  border: none;
   border-radius: 50%;
   padding: 10px;
-  margin: 20px 0px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.footer .btn1:hover {
-  background-color: rgba(31, 24, 83, 0.592);
+.footer button:hover {
+  background-color: #847010;
 }
 
-.footer .btn2:hover {
-  background-color: rgb(145, 60, 60);
+.footer i {
+  font-size: 18px;
+  color: #fff;
 }
 
-.footer .btn3:hover {
-  background-color: #0275d8;
-}
-
-.footer .btn4:hover {
-  background-color: #0275d8;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ========== Media Queries ========== */
+@media (max-width: 991px) {
+  .list-nav {
+    display: none;
   }
 
-  .logo-nav img {
-    width: 200px;
-    padding: 10px;
-  }
-
-  .list-nav ul {
-    display: flex;
-    column-gap: 20px;
-  }
-
-  .baker .logo-baker img {
-    width: 700px;
-    margin: 50px;
-  }
-
-  .baker {
-    display: flex;
-    justify-content: center;
-  }
-
-  .our-location {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .our-location .logo-our img {
-    width: 700px;
-  }
-
-  .text-our {
-    padding: 20px;
-  }
-
-  .text-our h4 {
-    font-size: 30px;
-  }
-
-  .text-our p {
-    padding: 20px;
-    line-height: 2em;
-  }
-
-  .our-location .text-our {
-    transform: translateY(15%);
-  }
-
-  .session3 {
-    display: flex;
-    justify-content: space-evenly;
-    column-gap: 30px;
-  }
-
-  .ssession {
-    width: 90%;
-    margin: auto;
-  }
-}
-
-@media (max-width: 768px) {
   .main-btn {
     display: block;
   }
 
-  .list-nav {
-    display: none;
+  .header-text h1 {
+    font-size: 40px;
   }
-  .logo-nav img{
-    margin-left: 200px;
- }
+
+  .btn1,
+  .btn2 {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .session3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo-nav img {
+    width: 150px;
+    margin-left: 150px;
+  }
 }
