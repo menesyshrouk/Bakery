@@ -7,48 +7,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <!-- Sidebar button (mobile) -->
-  <button class="main-btn" aria-label="Toggle Menu" onclick="toggleSidebar()">
-    <i class="fa-solid fa-bars"></i>
+  <!-- button bars -->
+   <button class="main-btn" onclick="toggleSidebar()">
+  <i class="fa-solid fa-bars"></i>
+</button>
+ <div class="bars" id="sidebar">
+  <button class="close-btn" onclick="toggleSidebar()">
+    <i class="fa-solid fa-xmark"></i>
   </button>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Our Offer</a>
+  <a href="#">Gallery</a>
+  <a href="#">Blog</a>
+  <a href="#">Contact</a>
+</div>
 
-  <!-- Sidebar menu -->
-  <nav class="bars" id="sidebar">
-    <button class="close-btn" onclick="toggleSidebar()">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#offer">Our Offer</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Navbar -->
-  <nav class="navbar">
+<!-- navbar   -->
+<div class="navbar">
     <div class="logo-nav">
       <img src="image/bakery-light-1.png" alt="bakery logo" />
     </div>
     <div class="list-nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#offer">Our Offer</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Our Offer</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
 
-  <!-- Header -->
-  <header id="home" class="header">
+<!-- header -->
+  <div class="header">
     <div class="header-text">
       <span>Welcome to</span>
       <h1>Family Bakery</h1>
@@ -58,78 +56,77 @@
         <button class="btn2">Contact Us</button>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="baker">
+  <!-- Section 1 -->
+  <div class="baker">
     <div class="logo-baker">
-      <img src="image/alexandru-stavrica.jpg" alt="About Bakery" />
+      <img src="image/alexandru-stavrica.jpg" alt="food" />
     </div>
     <div class="text-baker">
       <h3>Who we are?</h3>
-      <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it makes our lives better.</p>
+      <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it make our lives better.</p>
       <div class="list-icon">
         <ul>
-          <li><i class="fa-solid fa-leaf"></i><span>We care about environment.</span></li>
-          <li><i class="fa-solid fa-user-group"></i><span>We are trusted by hundreds of clients.</span></li>
-          <li><i class="fa-solid fa-heart"></i><span>Social media loves us!</span></li>
-          <li><i class="fa-solid fa-check"></i><span>This list is super easy to create</span></li>
+          <li><i class="fa-solid fa-leaf" style="color: #847010;"></i><span>We care about environment.</span></li>
+          <li><i class="fa-solid fa-user-group" style="color: #847010;"></i><span>We are trusted by hundreds of clients.</span></li>
+          <li><i class="fa-solid fa-heart" style="color: #847010;"></i><span>Social media loves us!</span></li>
+          <li><i class="fa-solid fa-check" style="color: #847010;"></i><span>This list is super easy to create</span></li>
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Location Section -->
-  <section id="offer" class="our-location">
+  <!-- Section 2 -->
+  <div class="our-location">
     <div class="text-our">
       <h4>Our Location</h4>
-      <p>We have been operating for over 30 years. We work on projects big and small. Everyday it makes our lives better.</p>
-      <p>Projects from small residential extensions to full house. We are so happy with this theme.</p>
+      <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it make our lives better.</p>
+      <p>Story on projects big and small from small residential extensions to full house. We are so happy with this theme. Everyday it make our lives better</p>
     </div>
     <div class="logo-our">
-      <img src="image/full-2.jpg" alt="Our Location" />
+      <img src="image/full-2.jpg" alt="our-location logo" />
     </div>
-  </section>
+  </div>
 
-  <!-- Baking Section -->
-  <section id="gallery" class="baking-section">
+  <!-- Section 3 -->
+  <div class="ssession">
     <div class="textsession">
       <h4>Our Baking</h4>
-      <p>Learn more about them. We worked hard to make them perfect for every use.</p>
+      <p>Learn more about them. We have worked truly hard to make them perfect for every use.</p>
     </div>
     <div class="session3">
       <div class="list-menu">
-        <img src="image/ben-garratt.jpg" alt="Superior Breads" />
+        <img src="image/ben-garratt.jpg" alt="bakery photo" />
         <h4>Superior Breads</h4>
-        <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero.</p>
+        <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris velit a velit. Phasellus commodo turpis et lacinia posuere.</p>
       </div>
       <div class="list-menu">
-        <img src="image/clem-onojeghuo.jpg" alt="Delicious Cakes" />
+        <img src="image/clem-onojeghuo.jpg" alt="bakery photo" />
         <h4>Delicious Cakes</h4>
-        <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero.</p>
+        <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris velit a velit. Phasellus commodo turpis et lacinia posuere.</p>
       </div>
       <div class="list-menu">
-        <img src="image/stas-ovsky.jpg" alt="Tasty Cookies" />
+        <img src="image/stas-ovsky.jpg" alt="bakery photo" />
         <h4>Tasty Cookies</h4>
-        <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero.</p>
+        <p>Proin interdum, ante ut sollicitudin commodo, tellus quam sagittis libero, at semper mauris velit a velit. Phasellus commodo turpis et lacinia posuere.</p>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Footer -->
-  <footer id="contact" class="footer">
+  <div class="footer">
     <div class="img">
-      <img src="image/bakery-light-1.png" alt="Footer logo" /><br />
-      <span>© 2025. All rights reserved.</span><br />
-      <div class="social-icons">
-        <button class="btn3"><i class="fa-brands fa-facebook-f"></i></button>
-        <button class="btn3"><i class="fa-brands fa-google-plus-g"></i></button>
-        <button class="btn3"><i class="fa-brands fa-linkedin"></i></button>
-        <button class="btn3"><i class="fa-brands fa-twitter"></i></button>
-      </div>
+      <img src="image/bakery-light-1.png" alt="footer logo" /><br />
+      <span>Copyright 2025. All rights reserved.</span><br />
+      <button class="btn1"><i class="fa-brands fa-facebook-f" style="color: #aaafb4;"></i></button>
+      <button class="btn2"><i class="fa-brands fa-google-plus-g" style="color: #aaafb4;"></i></button>
+      <button class="btn3"><i class="fa-brands fa-linkedin" style="color: #aaafb4;"></i></button>
+      <button class="btn4"><i class="fa-brands fa-twitter" style="color: #aaafb4;"></i></button>
     </div>
-  </footer>
+  </div>
 
-  <script src="index.js"></script>
+<Script src="index.js"></Script>
+
 </body>
 </html>
